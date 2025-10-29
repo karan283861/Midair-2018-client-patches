@@ -1,6 +1,6 @@
 # Midair (2018) client patches
 
-## Want to play without straight away without patching?
+## Want to play straight away without patching?
 Follow the instructions at [here](HowToRunWithoutPatches.md)
 
 ---
