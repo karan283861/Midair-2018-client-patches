@@ -1,13 +1,23 @@
 # Midair (2018) client patches
+
+## Want to play without straight away without patching?
+Follow the instructions at [here](HowToRunWithoutPatches.md)
+
+---
+
+## What are the patches and why?
 A collection of client side patches for Midair
 Currently just a set of assembly patches to
-* Disable Midair's prediction (set via Predict command)
+1. Disable Midair's player prediction (set via Predict command)
+2. Disable Midair's fake projectile logic (also set via Predict command)
+
+Patches (1, 2) are to prevent the Midair client from performing client side prediction of other players, so lag compensation can be implemented server side. If these patches are not performed on the client while joined to a server with lag compensation enabled, then the player will not be able to utilise the benefits of server side lag compensation due to inaccurate client predictions and inaccurate "fake" projectiles.
 
 ### Requirements
 1. Midair client (normally obtainable via Steam)
 2. Python 3 (preferably the latest or closest to latest version)
 3. Pymem package installed via PIP
-4. This repository
+4. This repository (for the python file/s)
 
 ## Setting up for the first time
 
@@ -33,3 +43,6 @@ Once you have successfully installed Midair,
 2. Run Midair via the shortcut you have created
 3. Run the python script provided
 4. If your last `predict` command value is non zero, then enter `predict 0` once you have joined a server
+
+## Connecting to a server
+Currently server support is limited, however you can attempt to connect to a server by entering `open midair2018-1.ddns.net` in console
